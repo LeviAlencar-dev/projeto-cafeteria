@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color-fundopagina: #FAF5EE;
+    --color-fundocardsEheader: #FFFFFF;
+    --color-textoprincipalErodape: #3B2A20;
+    --color-textosecundario: #6F4E37;
+    --color-textoparagrafos: #7A6A5E;
+    --color-detaques: #C98A4B;
+    --color-destaquehover: #A86D32;
+    --color-etiqueta: #586B4a;
+    --cor-ilustracoes: #F0E2D0;
+    --color-bordassuaves: #D9C6AE;
+}
+
+body {
+    background-color: var(--color-fundopagina);
+}
+
+/* Cabeçalho / Nav */
+header {
+    background-color: var(--color-fundocardsEheader);
+    border-bottom: 1px solid var(--color-bordassuaves);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 10px;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+}
+
+.header-info h1 {
+    color: var(--color-textoprincipalErodape);
+    font-size: 20px;
+}
+
+nav button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+/* Conteúdo Principal */
+
+/* Início */
+.conteudo-inicio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-inicio img {
+    width: 150px;
+}
+
+.conteudo-inicio h2 {
+    color: #586B4a;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.conteudo-inicio h3 {
+    font-size: 30px;
+    color: var(--color-textosecundario);
+}
+
+.conteudo-inicio p {
+    color: var(--color-textoparagrafos);
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.conteudo-inicio .btn-cor {
+    text-decoration: none;
+    color: var(--color-fundocardsEheader);
+    background-color: var(--color-detaques);
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-size: 15px;
+} 
+
+.conteudo-inicio .btn-transparente {
+    color: var(--color-detaques);
+    background-color: transparent;
+    border: 2px solid var(--color-detaques);
+}
+
+
+/* Destaques */
+.conteudo-destaques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-destaques h2 {
+    color: var(--color-textosecundario);
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.itens-destaques {
+    border-bottom: 2px solid var(--color-detaques);
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    background-color: var(--color-fundocardsEheader);
+    padding: 12px;
+}
+
+.itens-destaques img {
+    max-width: 70px;
+}
+
+.itens-destaques-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.itens-destaques-info h3 {
+    color: var(--color-textosecundario);
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.itens-destaques-info p {
+    color: var(--color-textoparagrafos);
+    font-size: 15px;
+}
+
+/* Cardápio */
+.conteudo-cardapio {
+ background-color: var(--color-fundocardsEheader);
+}
+
+.conteudo-cardapio h2 {
+    color: var(--color-textosecundario);
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn-itens {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-itens button {
+    border: 2px solid var(--color-bordassuaves);
+    background-color: transparent;
+    color: var(--color-textoparagrafos);
+    border-radius: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.itens-info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed var(--color-bordassuaves);
+}
+
+.itens-info h3 {
+    color: var(--color-textosecundario);
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.itens-info p {
+    color: var(--color-textoparagrafos);
+    font-size: 15px;
+}
+
+/* Sobre nós */
+
+.conteudo-sobrenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo-sobrenos img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.conteudo-sobrenos h2 {
+    color: var(--color-textosecundario);
+    font-size: 20px;
+}
+
+.conteudo-sobrenos p {
+    color: var(--color-textoparagrafos);
+    font-size: 15px;
+}
+
+.sobrenos-infos {
+    padding: 15px 0;
+    color: var(--color-textosecundario);
+    text-align: center;
+    background-color: var(--cor-ilustracoes);
+    width: 100%;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    color: var(--cor-ilustracoes);
+    background-color: var(--color-textoprincipalErodape);
+    padding: 18px 0;
+}
+
+
+
+
+
+
