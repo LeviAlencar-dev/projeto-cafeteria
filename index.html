@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Cafetria.">
+    <meta name="author" content="Levi Alencar">
     <link rel="stylesheet" href="style.css">
     <title>Grão & Cia</title>
 </head>
@@ -34,26 +36,30 @@
             <img src="img/hero-cafe.svg" alt="">
             <h2>Café artesanal </h2>
             <h3>Cada xícara conta uma história</h3>
-                <p>Grão selecionados e um cantinho pra desacelerar.</p>
-                <a href="" class="btn-cor">Ver cardápio</a>
-                <a href="" class="btn-cor btn-transparente">Como chegar</a>
+            <p>Grão selecionados e um cantinho pra desacelerar.</p>
+            <div class="box-btn">
+                <a href="#" class="btn-cor">Ver cardápio</a>
+                <a href="#" class="btn-cor btn-transparente">Como chegar</a>
+            </div>
         </section>
 
         <!-- Destaques -->
         <section class="conteudo-destaques">
             <h2>Nossos destaques</h2>
-            <div class="itens-destaques">
-                <img src="img/espresso.svg" alt="">
-                <div class="itens-destaques-info">
-                    <h3>Expresso</h3>
-                    <p>R$ 7,00</p>
+            <div class="box-destaques">
+                <div class="itens-destaques">
+                    <img src="img/espresso.svg" alt="">
+                    <div class="itens-destaques-info">
+                        <h3>Expresso</h3>
+                        <p>R$ 7,00</p>
+                    </div>
                 </div>
-            </div>
-            <div class="itens-destaques">
-                <img src="img/croissant.svg" alt="">
-                <div class="itens-destaques-info">
-                    <h3>Croissant</h3>
-                    <p>R$ 12,00</p>
+                <div class="itens-destaques">
+                    <img src="img/croissant.svg" alt="">
+                    <div class="itens-destaques-info">
+                        <h3>Croissant</h3>
+                        <p>R$ 12,00</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,9 +68,9 @@
         <section class="conteudo-cardapio">
             <h2>Cardápio</h2>
             <div class="btn-itens">
-                <button>Cafés</button>
-                <button>Doces</button>
-                <button>Salgados</button>
+                <button id="cafe">Cafés</button>
+                <button id="doces">Doces</button>
+                <button id="salgados">Salgados</button>
             </div>
 
             <div class="itens-info">
@@ -81,11 +87,13 @@
 
         <!-- Sobre nós -->
         <section class="conteudo-sobrenos">
+            <div class="box-sobrenos">
 
-            <img src="img/sobre-nos.svg" alt="">
+                <img src="img/sobre-nos.svg" alt="">
 
-            <h2>Sobre nós</h2>
-            <p>Dois amigos de muita vontade de receber bem</p>
+                <h2>Sobre nós</h2>
+                <p>Dois amigos de muita vontade de receber bem.</p>
+            </div>
 
             <div class="sobrenos-infos">
                 <p>Seg a sáb, 7h às 19h</p>
@@ -102,6 +110,7 @@
     </main>
 
     <script src="script.js"></script>
+    
 </body>
 
 </html>

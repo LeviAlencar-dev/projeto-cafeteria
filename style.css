@@ -61,6 +61,7 @@ nav button {
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding: 25px 20px;
 }
 
 .conteudo-inicio img {
@@ -73,11 +74,13 @@ nav button {
     font-size: 15px;
     font-weight: 400;
     letter-spacing: 3px;
+    padding: 15px 0 10px;
 }
 
 .conteudo-inicio h3 {
     font-size: 30px;
     color: var(--color-textosecundario);
+    padding-bottom: 15px;
 }
 
 .conteudo-inicio p {
@@ -85,9 +88,17 @@ nav button {
     font-size: 15px;
     letter-spacing: 1px;
     line-height: 25px;
+    padding-bottom: 15px;
 }
 
-.conteudo-inicio .btn-cor {
+.box-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+ .box-btn .btn-cor {
     text-decoration: none;
     color: var(--color-fundocardsEheader);
     background-color: var(--color-detaques);
@@ -95,27 +106,41 @@ nav button {
     padding: 10px 0;
     border-radius: 10px;
     font-size: 15px;
+    transition: all .3s;
 } 
+.box-btn .btn-cor:hover {
+    background-color: var(--color-destaquehover);
+}
 
-.conteudo-inicio .btn-transparente {
+.box-btn .btn-transparente {
     color: var(--color-detaques);
     background-color: transparent;
     border: 2px solid var(--color-detaques);
+    transition: color .2s, background-color .5s;
+}
+
+.box-btn .btn-transparente:hover {
+    color: var(--color-fundocardsEheader);
+    background-color: var(--color-detaques);
 }
 
 
 /* Destaques */
 .conteudo-destaques {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 20px 30px;
 }
 
 .conteudo-destaques h2 {
     color: var(--color-textosecundario);
     font-size: 20px;
     padding-bottom: 10px;
+    text-align: center;
+}
+
+.box-destaques {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .itens-destaques {
@@ -151,7 +176,8 @@ nav button {
 
 /* Cardápio */
 .conteudo-cardapio {
- background-color: var(--color-fundocardsEheader);
+    background-color: var(--color-fundocardsEheader);
+    padding: 25px 20px 15px;
 }
 
 .conteudo-cardapio h2 {
@@ -164,6 +190,7 @@ nav button {
     display: flex;
     justify-content: center;
     gap: 8px;
+    padding: 15px 0;
 }
 
 .btn-itens button {
@@ -179,11 +206,12 @@ nav button {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px dashed var(--color-bordassuaves);
+    margin-bottom: 10px;
 }
 
 .itens-info h3 {
     color: var(--color-textosecundario);
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 5px;
 }
 
@@ -193,26 +221,30 @@ nav button {
 }
 
 /* Sobre nós */
-
 .conteudo-sobrenos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px 0 0;
 }
 
-.conteudo-sobrenos img {
+.box-sobrenos {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.box-sobrenos img {
     max-width: 100%;
     border-radius: 20px;
 }
 
-.conteudo-sobrenos h2 {
+.box-sobrenos h2 {
     color: var(--color-textosecundario);
     font-size: 20px;
+    padding: 10px 0 5px;
 }
 
-.conteudo-sobrenos p {
+.box-sobrenos p{
     color: var(--color-textoparagrafos);
     font-size: 15px;
+    padding-bottom: 20px;
 }
 
 .sobrenos-infos {
@@ -222,6 +254,13 @@ nav button {
     background-color: var(--cor-ilustracoes);
     width: 100%;
 }
+
+.sobrenos-infos p {
+     color: var(--color-textoparagrafos);
+     font-size: 15px;
+     line-height: 25px;
+}
+
 
 /* Rodapé */
 footer {
