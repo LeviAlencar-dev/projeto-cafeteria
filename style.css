@@ -8,17 +8,16 @@
 }
 
 :root {
-    --color-fundopagina: #FAF5EE;
-    --color-fundocardsEheader: #FFFFFF;
-    --color-textoprincipalErodape: #3B2A20;
-    --color-textosecundario: #6F4E37;
-    --color-textoparagrafos: #7A6A5E;
-    --color-detaques: #C98A4B;
-    --color-destaquehover: #A86D32;
-    --color-etiqueta: #586B4a;
+    --cor-fundopagina: #FAF5EE;
+    --cor-fundocardsEheader: #FFFFFF;
+    --cor-textoprincipalErodape: #3B2A20;
+    --cor-textosecundario: #6F4E37;
+    --cor-textoparagrafos: #7A6A5E;
+    --cor-detaques: #b67d44;
+    --cor-destaquehover: #A86D32;
+    --cor-etiqueta: #586B4a;
     --cor-ilustracoes: #F0E2D0;
-    --color-bordassuaves: #D9C6AE;
-    --color-fundomenu: ;
+    --cor-bordassuaves: #D9C6AE;
 }
 
 body {
@@ -31,8 +30,8 @@ body {
 
 /* Cabeçalho / Nav */
 header {
-    background-color: var(--color-fundocardsEheader);
-    border-bottom: 1px solid var(--color-bordassuaves);
+    background-color: var(--cor-fundocardsEheader);
+    border-bottom: 1px solid var(--cor-bordassuaves);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +51,7 @@ header {
 }
 
 
-nav button {
+ header button {
     border: none;
     display: flex;
     justify-content: center;
@@ -63,24 +62,23 @@ nav button {
     padding: 4px;
 }
 
-nav button:hover {
-    background-color: var(--color-detaques);
+header button:hover {
+    background-color: var(--cor-detaques);
 }
 
-nav button img {
+ header button img {
     width: 22px;
 }
 
-.menu {
+nav {
     opacity: 0;
     visibility: hidden;
     display: flex;
     flex-direction: column;
     position: fixed;
     background-color: #f0e2d0da;
-    min-height: 100vh;
-    max-width: 100vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     z-index: 1;
     text-align: center;
     padding-top: 100px;
@@ -88,19 +86,19 @@ nav button img {
     transition: all .3s;
 }
 
-.menu-aberto {
+.nav-aberto {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
 
-.menu h2 {
-    color: var(--color-textoprincipalErodape);
+nav h2 {
+    color: var(--cor-textoprincipalErodape);
     font-size: 25px;
 }
 
-.menu ul {
+nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -108,19 +106,15 @@ nav button img {
     padding: 30px 80px 80px;
 }
 
-.menu ul li {
-    
-}
-
-.menu ul li a{
+nav ul li a{
     text-decoration: none;
     font-size: 20px;
-    color: var(--color-textoprincipalErodape);
+    color: var(--cor-textoprincipalErodape);
     display: block;
     transition: transform .3s;
 }
 
-.menu ul li a:hover {
+nav ul li a:hover {
     transform: scale(1.2);
 }
 
@@ -142,6 +136,12 @@ nav button img {
 }
 
 .conteudo-inicio h2 {
+    font-size: 30px;
+    color: var(--cor-textosecundario);
+    padding-bottom: 15px;
+}
+
+.conteudo-inicio h3 {
     color: #586B4a;
     text-transform: uppercase;
     font-size: 15px;
@@ -150,14 +150,8 @@ nav button img {
     padding: 15px 0 10px;
 }
 
-.conteudo-inicio h3 {
-    font-size: 30px;
-    color: var(--color-textosecundario);
-    padding-bottom: 15px;
-}
-
 .conteudo-inicio p {
-    color: var(--color-textoparagrafos);
+    color: var(--cor-textoparagrafos);
     font-size: 15px;
     letter-spacing: 1px;
     line-height: 25px;
@@ -173,29 +167,29 @@ nav button img {
 
  .box-btn .btn-cor {
     text-decoration: none;
-    color: var(--color-fundocardsEheader);
-    background-color: var(--color-detaques);
+    color: var(--cor-fundocardsEheader);
+    background-color: var(--cor-detaques);
     width: 100%;
     padding: 10px 0;
-    border: 2px transparent;
+    border: 2px solid transparent;
     border-radius: 10px;
     font-size: 15px;
     transition: all .3s;
 } 
 .box-btn .btn-cor:hover {
-    background-color: var(--color-destaquehover);
+    background-color: var(--cor-destaquehover);
 }
 
 .box-btn .btn-transparente {
     color: var(--color-detaques);
     background-color: transparent;
-    border: 2px solid var(--color-detaques);
+    border: 2px solid var(--cor-detaques);
     transition: color .2s, background-color .5s;
 }
 
 .box-btn .btn-transparente:hover {
-    color: var(--color-fundocardsEheader);
-    background-color: var(--color-detaques);
+    color: var(--cor-fundocardsEheader);
+    background-color: var(--cor-detaques);
 }
 
 
@@ -205,7 +199,7 @@ nav button img {
 }
 
 .conteudo-destaques h2 {
-    color: var(--color-textosecundario);
+    color: var(--cor-textosecundario);
     font-size: 20px;
     padding-bottom: 10px;
     text-align: center;
@@ -218,11 +212,11 @@ nav button img {
 }
 
 .itens-destaques {
-    border-bottom: 2px solid var(--color-detaques);
+    border-bottom: 2px solid var(--cor-detaques);
     width: 100%;
     border-radius: 10px;
     display: flex;
-    background-color: var(--color-fundocardsEheader);
+    background-color: var(--cor-fundocardsEheader);
     padding: 12px;
 }
 
@@ -238,24 +232,24 @@ nav button img {
 }
 
 .itens-destaques-info h3 {
-    color: var(--color-textosecundario);
+    color: var(--cor-textosecundario);
     font-size: 18px;
     padding-bottom: 5px;
 }
 
 .itens-destaques-info p {
-    color: var(--color-textoparagrafos);
+    color: var(--cor-textoparagrafos);
     font-size: 15px;
 }
 
 /* Cardápio */
 .conteudo-cardapio {
-    background-color: var(--color-fundocardsEheader);
+    background-color: var(--cor-fundocardsEheader);
     padding: 25px 20px 15px;
 }
 
 .conteudo-cardapio h2 {
-    color: var(--color-textosecundario);
+    color: var(--cor-textosecundario);
     font-size: 20px;
     text-align: center;
 }
@@ -268,9 +262,9 @@ nav button img {
 }
 
 .btn-itens button {
-    border: 2px solid var(--color-bordassuaves);
+    border: 2px solid var(--cor-bordassuaves);
     background-color: transparent;
-    color: var(--color-textoparagrafos);
+    color: var(--cor-textoparagrafos);
     border-radius: 20px;
     padding: 5px 20px;
     cursor: pointer;
@@ -283,12 +277,12 @@ nav button img {
 }
 
 .categoria.selecionado {
-    background-color: var(--color-textoprincipalErodape);
-    color: var(--color-fundopagina);
-    border: none;
+    background-color: var(--cor-textoprincipalErodape);
+    color: var(--cor-fundopagina);
+    border: 2px solid transparent;
 }
 
-div.itens-info h3 {
+.itens-info h3 {
     font-size: 18px;
     display: flex;
     justify-content: space-between;
@@ -303,12 +297,6 @@ div.itens-info h3 {
 
 .itens-info.desativado {
     display: none;
-}
-
-.itens-info h3 {
-    color: var(--color-textosecundario);
-    font-size: 16px;
-    padding-bottom: 5px;
 }
 
 /* Sobre nós */
@@ -327,27 +315,27 @@ div.itens-info h3 {
 }
 
 .box-sobrenos h2 {
-    color: var(--color-textosecundario);
+    color: var(--cor-textosecundario);
     font-size: 20px;
     padding: 10px 0 5px;
 }
 
 .box-sobrenos p{
-    color: var(--color-textoparagrafos);
+    color: var(--cor-textoparagrafos);
     font-size: 15px;
     padding-bottom: 20px;
 }
 
 .sobrenos-infos {
     padding: 15px 0;
-    color: var(--color-textosecundario);
+    color: var(--cor-textosecundario);
     text-align: center;
     background-color: var(--cor-ilustracoes);
     width: 100%;
 }
 
 .sobrenos-infos p {
-     color: var(--color-textoparagrafos);
+     color: var(--cor-textoparagrafos);
      font-size: 15px;
      line-height: 25px;
 }
@@ -357,7 +345,7 @@ div.itens-info h3 {
 footer {
     text-align: center;
     color: var(--cor-ilustracoes);
-    background-color: var(--color-textoprincipalErodape);
+    background-color: var(--cor-textoprincipalErodape);
     padding: 18px 0;
 }
 
