@@ -18,10 +18,15 @@
     --color-etiqueta: #586B4a;
     --cor-ilustracoes: #F0E2D0;
     --color-bordassuaves: #D9C6AE;
+    --color-fundomenu: ;
 }
 
 body {
     background-color: var(--color-fundopagina);
+}
+
+.body-travado {
+    overflow: hidden;
 }
 
 /* Cabeçalho / Nav */
@@ -32,6 +37,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 2px 10px;
+    position: sticky;
+    top: 0;
 }
 
 .header-info {
@@ -44,13 +51,79 @@ header {
     font-size: 20px;
 }
 
+
 nav button {
-    width: 35px;
-    height: 35px;
     border: none;
+    display: flex;
+    justify-content: center;
     background-color: transparent;
     border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .3s;
+    padding: 4px;
 }
+
+nav button:hover {
+    background-color: var(--color-detaques);
+}
+
+nav button img {
+    width: 22px;
+}
+
+.menu {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #f0e2d0da;
+    min-height: 100vh;
+    max-width: 100vh;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    padding-top: 100px;
+    transform: translateY(100%);
+    transition: all .3s;
+}
+
+.menu-aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.menu h2 {
+    color: var(--color-textoprincipalErodape);
+    font-size: 25px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 80px 80px;
+}
+
+.menu ul li {
+    
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-textoprincipalErodape);
+    display: block;
+    transition: transform .3s;
+}
+
+.menu ul li a:hover {
+    transform: scale(1.2);
+}
+
 
 /* Conteúdo Principal */
 
@@ -104,6 +177,7 @@ nav button {
     background-color: var(--color-detaques);
     width: 100%;
     padding: 10px 0;
+    border: 2px transparent;
     border-radius: 10px;
     font-size: 15px;
     transition: all .3s;
@@ -189,7 +263,7 @@ nav button {
 .btn-itens {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 15px;
     padding: 15px 0;
 }
 
@@ -200,24 +274,41 @@ nav button {
     border-radius: 20px;
     padding: 5px 20px;
     cursor: pointer;
+    transition: transform .3s;
+    font-size: 18px;
+}
+
+.btn-itens button:hover {
+    transform: scale(1.2);
+}
+
+.categoria.selecionado {
+    background-color: var(--color-textoprincipalErodape);
+    color: var(--color-fundopagina);
+    border: none;
+}
+
+div.itens-info h3 {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed var(--cor-ilustracoes);
+    margin-bottom: 10px;
 }
 
 .itens-info {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px dashed var(--color-bordassuaves);
-    margin-bottom: 10px;
+    display: block;
+    padding: 10px 0 0;
+}
+
+.itens-info.desativado {
+    display: none;
 }
 
 .itens-info h3 {
     color: var(--color-textosecundario);
     font-size: 16px;
     padding-bottom: 5px;
-}
-
-.itens-info p {
-    color: var(--color-textoparagrafos);
-    font-size: 15px;
 }
 
 /* Sobre nós */

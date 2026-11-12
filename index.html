@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projeto Cafetria.">
+    <meta name="description" content="Projeto Cafeteria.">
     <meta name="author" content="Levi Alencar">
     <link rel="stylesheet" href="style.css">
     <title>Grão & Cia</title>
@@ -16,24 +16,38 @@
     <header>
         <div class="header-info">
             <div class="box-logo">
-                <img src="img/logo.svg" alt="">
+                <img src="img/logo.svg" alt="Logo Cafeteria">
             </div>
             <h1>Grão & Cia</h1>
         </div>
 
         <nav>
-            <button>
-                <img src="img/menu.svg" alt="">
+
+            <button id="btn-menu" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" >
+                <img src="img/menu.svg" alt="" id="img-menu">
             </button>
+            
         </nav>
     </header>
 
     <!-- Conteúdo Principal -->
     <main>
 
+        <!-- Barra de Navegação -->
+        <div class="menu" id="menu">
+                <h2>Bem-vindo ao Grão & Cia</h2>
+                <ul>
+                    <li><a href="#inicio" class="item-menu">Início</a></li>
+                    <li><a href="#destaques" class="item-menu">Destaques</a></li>
+                    <li><a href="#cardapio" class="item-menu">Cardápio</a></li>
+                    <li><a href="#sobrenos" class="item-menu">Sobre</a></li>
+                    <li><a href="#contato" class="item-menu">Contato</a></li>
+                </ul>
+            </div>
+
         <!-- Início -->
-        <section class="conteudo-inicio">
-            <img src="img/hero-cafe.svg" alt="">
+        <section class="conteudo-inicio" id="inicio">
+            <img src="img/hero-cafe.svg" alt="Ilustração Café">
             <h2>Café artesanal </h2>
             <h3>Cada xícara conta uma história</h3>
             <p>Grão selecionados e um cantinho pra desacelerar.</p>
@@ -44,18 +58,26 @@
         </section>
 
         <!-- Destaques -->
-        <section class="conteudo-destaques">
+        <section class="conteudo-destaques" id="destaques">
             <h2>Nossos destaques</h2>
             <div class="box-destaques">
                 <div class="itens-destaques">
-                    <img src="img/espresso.svg" alt="">
+                    <img src="img/espresso.svg" alt="Ilustração Café Expresso">
                     <div class="itens-destaques-info">
                         <h3>Expresso</h3>
                         <p>R$ 7,00</p>
                     </div>
                 </div>
                 <div class="itens-destaques">
-                    <img src="img/croissant.svg" alt="">
+                    <img src="img/croissant.svg" alt="Ilustração Croissant">
+                    <div class="itens-destaques-info">
+                        <h3>Croissant</h3>
+                        <p>R$ 12,00</p>
+                    </div>
+                </div>
+
+                <div class="itens-destaques">
+                    <img src="img/bolo.svg" alt="Ilustração bolo">
                     <div class="itens-destaques-info">
                         <h3>Croissant</h3>
                         <p>R$ 12,00</p>
@@ -65,37 +87,42 @@
         </section>
 
         <!-- Cardápio -->
-        <section class="conteudo-cardapio">
+        <section class="conteudo-cardapio" id="cardapio">
             <h2>Cardápio</h2>
             <div class="btn-itens">
-                <button id="cafe">Cafés</button>
-                <button id="doces">Doces</button>
-                <button id="salgados">Salgados</button>
+                <button class="categoria selecionado" data-menu="cafe">Cafés</button>
+                <button class="categoria " data-menu="doces">Doces</button>
+                <button class="categoria" data-menu="salgados">Salgados</button>
             </div>
 
-            <div class="itens-info">
-                <h3>Expresso</h3>
-                <p>R$ 7,00</p>
+            <div class="itens-info " id="cafe">
+                <h3>Expresso <span>R$ 7,00</span></h3>
+                <h3>Cappucciono <span>R$ 10,00</span></h3>
             </div>
 
-            <div class="itens-info">
-                <h3>Cappucciono</h3>
-                <p>R$ 10,00</p>
+            <div class="itens-info desativado" id="doces">
+                <h3>Bolo de Chocolate <span>R$ 12,00</span></h3>
+                <h3>Brownie <span>R$ 8,00</span></h3>
+            </div>
+            
+            <div class="itens-info desativado" id="salgados">
+                <h3>Coxinha <span>R$ 7,00</span></h3>
+                <h3>Pão de queijo <span>R$ 10,00</span></h3>
             </div>
 
         </section>
 
         <!-- Sobre nós -->
-        <section class="conteudo-sobrenos">
+        <section class="conteudo-sobrenos" id="sobrenos">
             <div class="box-sobrenos">
 
-                <img src="img/sobre-nos.svg" alt="">
+                <img src="img/sobre-nos.svg" alt="Ilustração Cafeteria">
 
                 <h2>Sobre nós</h2>
                 <p>Dois amigos de muita vontade de receber bem.</p>
             </div>
 
-            <div class="sobrenos-infos">
+            <div class="sobrenos-infos" id="contato">
                 <p>Seg a sáb, 7h às 19h</p>
                 <p>Rua das Flores, 120</p>
                 <p>(88) 90000-0000</p>
@@ -110,7 +137,7 @@
     </main>
 
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
