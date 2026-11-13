@@ -21,10 +21,11 @@
             <h1>Grão & Cia</h1>
         </div>
 
-            <button id="btn-menu" aria-label="Abrir Barra de navegação" aria-controls="menu" aria-expanded="false" aria-pressed="false">
-                <img src="img/menu.svg" alt="" id="img-menu">
-            </button>
-        
+        <button id="btn-menu" aria-label="Abrir Barra de navegação" aria-controls="menu" aria-expanded="false"
+            aria-pressed="false">
+            <img src="img/menu.svg" alt="" id="img-menu">
+        </button>
+
     </header>
 
     <!-- Conteúdo Principal -->
@@ -44,12 +45,14 @@
         <!-- Início -->
         <section class="conteudo-inicio" id="inicio">
             <img src="img/hero-cafe.svg" alt="Ilustração Café">
-            <h3>Café artesanal </h3>
-            <h2>Cada xícara conta uma história</h3>
-            <p>Grão selecionados e um cantinho pra desacelerar.</p>
-            <div class="box-btn">
-                <a href="#" class="btn-cor">Ver cardápio</a>
-                <a href="#" class="btn-cor btn-transparente">Como chegar</a>
+            <div class="info-inicio">
+                <h3>Café artesanal </h3>
+                <h2>Cada xícara conta uma história</h2>
+                <p>Grão selecionados, torra na medida e um cantinho pra desacelerar.</p>
+                <div class="box-btn">
+                    <a href="#" class="btn-cor">Ver cardápio</a>
+                    <a href="#" class="btn-cor btn-transparente">Como chegar</a>
+                </div>
             </div>
         </section>
 
@@ -91,19 +94,65 @@
                 <button class="categoria" data-menu="salgados">Salgados</button>
             </div>
 
-            <div class="itens-info " id="cafe">
-                <h3>Expresso <span>R$ 7,00</span></h3>
-                <h3>Cappucciono <span>R$ 10,00</span></h3>
+            <div class="cardapio-info " id="cafe">
+
+                <div class="itens-info">
+                    <h3>Expresso</h3>
+                    <p>R$ 7,00</p>
+                </div>
+                <div class="itens-info">
+                    <h3>Cappucciono</h3>
+                    <p>R$ 10,00</p>
+                </div>
+                <div class="itens-info itens-desativado">
+                    <h3>Café Coado</h3>
+                    <p>R$ 6,00</p>
+                </div>
+                <div class="itens-info itens-desativado">
+                    <h3>Mocha</h3>
+                    <p>R$ 12,00</p>
+                </div>
+
+
             </div>
 
-            <div class="itens-info desativado" id="doces">
-                <h3>Bolo de Chocolate <span>R$ 12,00</span></h3>
-                <h3>Brownie <span>R$ 8,00</span></h3>
+            <div class="cardapio-info desativado" id="doces">
+                <div class="itens-info">
+                    <h3>Brownie</h3>
+                    <p>R$ 8,00</p>
+                </div>
+                <div class="itens-info">
+                    <h3>Bolo Cenoura</h3>
+                    <p>R$ 14,00</p>
+                </div>
+                <div class="itens-info itens-desativado">
+                    <h3>Rosquinha</h3>
+                    <p>R$ 6,00</p>
+                </div>
+                <div class="itens-info itens-desativado">
+                    <h3>Bolo de Chocolate</h3>
+                    <p>R$ 12,00</p>
+                </div>
             </div>
 
-            <div class="itens-info desativado" id="salgados">
-                <h3>Coxinha <span>R$ 7,00</span></h3>
-                <h3>Pão de queijo <span>R$ 10,00</span></h3>
+            <div class="cardapio-info desativado" id="salgados">
+
+                <div class="itens-info">
+                    <h3>Coxinha</h3>
+                    <p>R$ 7,00</p>
+                </div>
+                <div class="itens-info">
+                    <h3>Pâo de queijo</h3>
+                    <p>R$ 10,00</p>
+                </div>
+                <div class="itens-info itens-desativado">
+                    <h3>Esfirra</h3>
+                    <p>R$ 8,00</p>
+                </div>
+                <div class="itens-info itens-desativado">
+                    <h3>Hambúrguer</h3>
+                    <p>R$ 18,00</p>
+                </div>
             </div>
 
         </section>
@@ -114,18 +163,29 @@
 
                 <img src="img/sobre-nos.svg" alt="Ilustração Cafeteria">
 
-                <h2>Sobre nós</h2>
-                <p>Dois amigos de muita vontade de receber bem.</p>
+                <div class="sobrenos-info">
+                    <h2>Sobre nós</h2>
+                    <p>Dois amigos, uma máquina de expresso e muita vontade de receber bem.</p>
+                </div>
+
             </div>
 
-            <div class="sobrenos-infos" id="contato">
-                <p>Seg a sáb, 7h às 19h</p>
-                <p>Rua das Flores, 120</p>
-                <p>(88) 90000-0000</p>
+            <div class="sobrenos-contato-info" id="contato">
+
+                <div class="contato-info">
+                    <h2>Horários</h2>
+                    <p>Seg a sáb, 7h às 19h</p>
+                </div>
+                <div class="contato-info">
+                    <h2>Endereço</h2>
+                    <p>Rua das Flores, 120</p>
+                </div>
+                <div class="contato-info">
+                    <h2>Telefone</h2>
+                    <p>(88) 90000-0000</p>
+                </div>
             </div>
         </section>
-
-
 
     </main>
 
