@@ -16,37 +16,41 @@
     <header>
         <div class="header-info">
             <div class="box-logo">
-                <img src="img/logo.svg" alt="Logo Cafeteria">
+                <img src="img/logo.svg" alt="">
             </div>
             <h1>Grão & Cia</h1>
         </div>
 
-        <button id="btn-menu" aria-label="Abrir Barra de navegação" aria-controls="menu" aria-expanded="false"
-            aria-pressed="false">
+        <nav>
+            
+            <button id="btn-menu" aria-label="Barra de navegação" aria-controls="menu" aria-expanded="false">
             <img src="img/menu.svg" alt="" id="img-menu">
-        </button>
+             </button>
 
+            <div  id="menu">
+
+                <h2>Bem-vindo ao Grão & Cia</h2>
+
+                <ul>
+                    <li><a href="#inicio" class="item-menu">Início</a></li>
+                    <li><a href="#destaques" class="item-menu">Destaques</a></li>
+                    <li><a href="#cardapio" class="item-menu">Cardápio</a></li>
+                    <li><a href="#sobrenos" class="item-menu">Sobre</a></li>
+                    <li><a href="#contato" class="item-menu">Contato</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        
     </header>
 
     <!-- Conteúdo Principal -->
     <main>
-
-        <nav id="menu">
-            <h2>Bem-vindo ao Grão & Cia</h2>
-            <ul>
-                <li><a href="#inicio" class="item-menu">Início</a></li>
-                <li><a href="#destaques" class="item-menu">Destaques</a></li>
-                <li><a href="#cardapio" class="item-menu">Cardápio</a></li>
-                <li><a href="#sobrenos" class="item-menu">Sobre</a></li>
-                <li><a href="#contato" class="item-menu">Contato</a></li>
-            </ul>
-        </nav>
-
         <!-- Início -->
         <section class="conteudo-inicio" id="inicio">
             <img src="img/hero-cafe.svg" alt="Ilustração Café">
             <div class="info-inicio">
-                <h3>Café artesanal </h3>
+                <p class="etiqueta">Café artesanal</p>
                 <h2>Cada xícara conta uma história</h2>
                 <p>Grão selecionados, torra na medida e um cantinho pra desacelerar.</p>
                 <div class="box-btn">
@@ -61,14 +65,14 @@
             <h2>Nossos destaques</h2>
             <div class="box-destaques">
                 <div class="itens-destaques">
-                    <img src="img/espresso.svg" alt="Ilustração Café Expresso">
+                    <img src="img/espresso.svg" alt="">
                     <div class="itens-destaques-info">
                         <h3>Expresso</h3>
                         <p>R$ 7,00</p>
                     </div>
                 </div>
                 <div class="itens-destaques">
-                    <img src="img/croissant.svg" alt="Ilustração Croissant">
+                    <img src="img/croissant.svg" alt="">
                     <div class="itens-destaques-info">
                         <h3>Croissant</h3>
                         <p>R$ 12,00</p>
@@ -76,7 +80,7 @@
                 </div>
 
                 <div class="itens-destaques">
-                    <img src="img/bolo.svg" alt="Ilustração bolo">
+                    <img src="img/bolo.svg" alt="">
                     <div class="itens-destaques-info">
                         <h3>Bolo de Cenoura</h3>
                         <p>R$ 14,00</p>
@@ -104,11 +108,11 @@
                     <h3>Cappucciono</h3>
                     <p>R$ 10,00</p>
                 </div>
-                <div class="itens-info itens-desativado">
+                <div class="itens-info">
                     <h3>Café Coado</h3>
                     <p>R$ 6,00</p>
                 </div>
-                <div class="itens-info itens-desativado">
+                <div class="itens-info">
                     <h3>Mocha</h3>
                     <p>R$ 12,00</p>
                 </div>
@@ -125,11 +129,11 @@
                     <h3>Bolo de Cenoura</h3>
                     <p>R$ 14,00</p>
                 </div>
-                <div class="itens-info itens-desativado">
+                <div class="itens-info">
                     <h3>Rosquinha</h3>
                     <p>R$ 6,00</p>
                 </div>
-                <div class="itens-info itens-desativado">
+                <div class="itens-info">
                     <h3>Bolo de Chocolate</h3>
                     <p>R$ 12,00</p>
                 </div>
@@ -143,13 +147,13 @@
                 </div>
                 <div class="itens-info">
                     <h3>Pão de queijo</h3>
-                    <p>R$ 10,00</p>
+                    <p>R$ 4,00</p>
                 </div>
-                <div class="itens-info itens-desativado">
+                <div class="itens-info">
                     <h3>Esfirra</h3>
                     <p>R$ 8,00</p>
                 </div>
-                <div class="itens-info itens-desativado">
+                <div class="itens-info">
                     <h3>Hambúrguer</h3>
                     <p>R$ 18,00</p>
                 </div>
@@ -173,15 +177,15 @@
             <div class="sobrenos-contato-info" id="contato">
 
                 <div class="contato-info">
-                    <h2>Horários</h2>
+                    <h3>Horários</h3>
                     <p>Seg a sáb, 7h às 19h</p>
                 </div>
                 <div class="contato-info">
-                    <h2>Endereço</h2>
+                    <h3>Endereço</h3>
                     <p>Rua das Flores, 120</p>
                 </div>
                 <div class="contato-info">
-                    <h2>Telefone</h2>
+                    <h3>Telefone</h3>
                     <p>(88) 90000-0000</p>
                 </div>
             </div>

@@ -19,6 +19,7 @@
     --cor-ilustracoes: #F0E2D0;
     --cor-bordassuaves: #D9C6AE;
     --cor-fundonavegacao: #f0e2d0da;
+
 }
 
 body {
@@ -51,8 +52,7 @@ header {
     font-size: 20px;
 }
 
-
- header button {
+ header nav button {
     border: none;
     display: flex;
     justify-content: center;
@@ -63,15 +63,15 @@ header {
     padding: 4px;
 }
 
-header button:hover {
+header nav button:hover {
     background-color: var(--cor-detaques);
 }
 
- header button img {
+header nav button img {
     width: 22px;
 }
 
-nav {
+nav div {
     opacity: 0;
     visibility: hidden;
     display: flex;
@@ -80,26 +80,28 @@ nav {
     background-color: var(--cor-fundonavegacao);
     height: 100vh;
     width: 100vw;
-    z-index: 1;
     text-align: center;
     padding-top: 100px;
     transform: translateY(100%);
     transition: all .3s;
+    bottom: 0;
+    left: 0;
+    border: 2px solid;
 }
 
-.nav-aberto {
+.menu-aberto {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
 
-nav h2 {
+nav div h2 {
     color: var(--cor-textoprincipalErodape);
     font-size: 25px;
 }
 
-nav ul {
+nav div ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -107,7 +109,7 @@ nav ul {
     padding: 30px 80px 80px;
 }
 
-nav ul li a{
+nav div ul li a{
     text-decoration: none;
     font-size: 20px;
     color: var(--cor-textoprincipalErodape);
@@ -115,14 +117,10 @@ nav ul li a{
     transition: transform .3s;
 }
 
-nav ul li a:hover {
+nav div ul li a:hover {
     transform: scale(1.2);
 }
 
-@media (min-width: 768px) {
-
-
-}
 
 /* Conteúdo Principal */
 
@@ -151,10 +149,10 @@ nav ul li a:hover {
     padding-bottom: 15px;
 }
 
-.info-inicio h3 {
-    color: #586B4a;
+.info-inicio .etiqueta {
+    color: var(--cor-etiqueta);
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 3px;
     padding: 15px 0 10px;
@@ -162,7 +160,7 @@ nav ul li a:hover {
 
 .info-inicio p {
     color: var(--cor-textoparagrafos);
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 1px;
     line-height: 25px;
     padding-bottom: 15px;
@@ -359,17 +357,13 @@ nav ul li a:hover {
 .itens-info h3 {
     font-size: 18px;
     padding-bottom: 5px;
+    color: var(--cor-textosecundario);
 }
 
 .itens-info p {
     font-size: 16px;
     color: var(--cor-textoparagrafos);
 }
-
-.itens-desativado {
-    display: none;
-}
-
 
 @media (min-width: 820px) {
 
@@ -384,9 +378,6 @@ nav ul li a:hover {
         column-gap: 40px;
     }
 
-    .itens-desativado {
-        display: flex;
-    }
 }
 
 /* Sobre nós */
@@ -427,11 +418,10 @@ nav ul li a:hover {
      font-size: 18px;
 }
 
-.contato-info h2 {
-    display: none;
+.contato-info h3 {
     font-size: 20px;
     color: var(--cor-textosecundario);
-    justify-content: center;
+    margin-bottom: 5px;
 }
 
 
@@ -443,9 +433,6 @@ nav ul li a:hover {
         justify-content: center;
         align-items: center;
         gap: 40px;
-    }
-
-    .box-sobrenos {
         padding: 40px 30px;
     }
 
@@ -466,11 +453,7 @@ nav ul li a:hover {
         flex: 1;
     }
 
-    .contato-info h2 {
-        display: flex;
-        margin-bottom: 5px;
-    }
-}   
+}    
 
 /* Rodapé */
 footer {
