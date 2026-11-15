@@ -20,6 +20,8 @@
     --cor-bordassuaves: #D9C6AE;
     --cor-fundonavegacao: #f0e2d0da;
 
+    --altura-header: 57px;
+
 }
 
 body {
@@ -52,7 +54,7 @@ header {
     font-size: 20px;
 }
 
- header nav button {
+ nav button {
     border: none;
     display: flex;
     justify-content: center;
@@ -71,14 +73,14 @@ header nav button img {
     width: 22px;
 }
 
-nav div {
+.box-menu {
     opacity: 0;
     visibility: hidden;
     display: flex;
     flex-direction: column;
     position: fixed;
     background-color: var(--cor-fundonavegacao);
-    height: 100vh;
+    height: calc(100vh -  var(--altura-header));
     width: 100vw;
     text-align: center;
     padding-top: 100px;
@@ -86,7 +88,6 @@ nav div {
     transition: all .3s;
     bottom: 0;
     left: 0;
-    border: 2px solid;
 }
 
 .menu-aberto {
@@ -96,12 +97,12 @@ nav div {
 }
 
 
-nav div h2 {
+.box-menu h2 {
     color: var(--cor-textoprincipalErodape);
     font-size: 25px;
 }
 
-nav div ul {
+.box-menu ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -109,7 +110,7 @@ nav div ul {
     padding: 30px 80px 80px;
 }
 
-nav div ul li a{
+.box-menu ul li a{
     text-decoration: none;
     font-size: 20px;
     color: var(--cor-textoprincipalErodape);
@@ -117,10 +118,38 @@ nav div ul li a{
     transition: transform .3s;
 }
 
-nav div ul li a:hover {
+.box-menu ul li a:hover {
     transform: scale(1.2);
 }
 
+@media (min-width: 820px) {
+    nav button {
+        display: none;
+    }
+
+    .box-menu {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        bottom: auto;
+        left: auto;
+        transform: translateY(0);
+        padding: 0;
+  }
+
+     .box-menu h2 {
+        display: none;
+  }
+
+  .box-menu ul {
+        flex-direction: row;
+        gap: 50px;
+        padding: 10px;
+}
+}
 
 /* Conteúdo Principal */
 
@@ -245,7 +274,7 @@ nav div ul li a:hover {
 }
 
 .itens-destaques {
-    border-bottom: 2px solid var(--cor-detaques);
+    border-bottom: 4px solid var(--cor-detaques);
     width: 100%;
     border-radius: 10px;
     display: flex;
