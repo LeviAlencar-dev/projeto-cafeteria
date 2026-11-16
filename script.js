@@ -27,7 +27,7 @@ function sessoesmenu() {
   body.classList.remove("body-travado");
   ImgMenu.src = "img/menu.svg";
   botaoMenu.setAttribute("aria-expanded", "false");
-}
+};
 
 
 // Cardápio

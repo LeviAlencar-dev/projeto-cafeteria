@@ -8,24 +8,26 @@
 }
 
 :root {
-    --cor-fundopagina: #FAF5EE;
-    --cor-fundocardsEheader: #FFFFFF;
-    --cor-textoprincipalErodape: #3B2A20;
-    --cor-textosecundario: #6F4E37;
-    --cor-textoparagrafos: #7A6A5E;
-    --cor-detaques: #b67d44;
-    --cor-destaquehover: #955f2a;
+    --cor-fundo-pagina: #FAF5EE;
+    --cor-fundo-cards-e-header: #FFFFFF;
+    --cor-fundo-navegacao: #f0e2d0da;
+    --cor-texto-principal: #3B2A20;
+    --cor-texto-secundario: #6F4E37;
+    --cor-paragrafos: #7A6A5E;
+    --cor-destaques: #b67d44;
+    --cor-destaque-hover: #955f2a;
+    --cor-borda-destaques: var(--cor-destaques);
+    --cor-fundo-cardapio-selecionado: var(--cor-texto-principal) ;
     --cor-etiqueta: #586B4a;
     --cor-ilustracoes: #F0E2D0;
-    --cor-bordassuaves: #D9C6AE;
-    --cor-fundonavegacao: #f0e2d0da;
-
+    --cor-bordas-suaves: #D9C6AE;
+    --cor-rodape: var(--cor-texto-principal);
     --altura-header: 60px;
 
 }
 
 body {
-    background-color: var(--cor-fundopagina);
+    background-color: var(--cor-fundo-pagina);
 }
 
 .body-travado {
@@ -34,8 +36,8 @@ body {
 
 /* Cabeçalho / Nav */
 header {
-    background-color: var(--cor-fundocardsEheader);
-    border-bottom: 1px solid var(--cor-bordassuaves);
+    background-color: var(--cor-fundo-cards-e-header);
+    border-bottom: 1px solid var(--cor-bordas-suaves);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,8 +54,8 @@ header {
 }
 
 .header-info h1 {
-    color: var(--cor-textoprincipalErodape);
-    font-size: 20px;
+    color: var(--cor-texto-principal);
+    font-size: 22px;
 }
 
  nav button {
@@ -68,7 +70,7 @@ header {
 }
 
  nav button:hover {
-    background-color: var(--cor-detaques);
+    background-color: var(--cor-destaques);
 }
 
  nav button img {       
@@ -81,13 +83,13 @@ header {
     display: flex;
     flex-direction: column;
     position: fixed;
-    background-color: var(--cor-fundonavegacao);
-    height: calc(100vh -  var(--altura-header));
-    width: 100vw;
+    background-color: var(--cor-fundo-navegacao);
+    height: calc(100dvh -  var(--altura-header));
+    width: 100%;
     text-align: center;
     padding-top: 100px;
     transform: translateY(100%);
-    transition: opacity.3s, visibility .3s, transform .3s;
+    transition: opacity .3s, visibility .3s, transform .3s;
     bottom: 0;
     left: 0;
 }
@@ -100,7 +102,7 @@ header {
 
 
 .box-menu h2 {
-    color: var(--cor-textoprincipalErodape);
+    color: var(--cor-texto-principal);
     font-size: 25px;
 }
 
@@ -115,7 +117,7 @@ header {
 .box-menu ul li a{
     text-decoration: none;
     font-size: 20px;
-    color: var(--cor-textoprincipalErodape);
+    color: var(--cor-texto-secundario);
     display: block;
     transition: transform .3s;
 }
@@ -158,6 +160,13 @@ button:focus-visible, a:focus-visible {
     }
 }
 
+@media (max-height: 380px) {
+    .box-menu {
+        padding-top:  20px;
+        overflow: auto;
+    }
+}
+
 /* Conteúdo Principal */
 
 /* Início */
@@ -181,7 +190,7 @@ button:focus-visible, a:focus-visible {
 
 .info-inicio h2 {
     font-size: 30px;
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
     padding-bottom: 15px;
 }
 
@@ -195,7 +204,7 @@ button:focus-visible, a:focus-visible {
 }
 
 .info-inicio p {
-    color: var(--cor-textoparagrafos);
+    color: var(--cor-paragrafos);
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 25px;
@@ -212,8 +221,8 @@ button:focus-visible, a:focus-visible {
 
  .box-btn .btn-cor {
     text-decoration: none;
-    color: var(--cor-fundocardsEheader);
-    background-color: var(--cor-detaques);
+    color: var(--cor-fundo-cards-e-header);
+    background-color: var(--cor-destaques);
     width: 100%;
     padding: 10px 0;
     border: 2px solid transparent;
@@ -223,19 +232,19 @@ button:focus-visible, a:focus-visible {
 } 
 
 .box-btn .btn-cor:hover {
-    background-color: var(--cor-destaquehover);
+    background-color: var(--cor-destaque-hover);
 }
 
 .box-btn .btn-transparente {
-    color: var(--cor-detaques);
+    color: var(--cor-destaques);
     background-color: transparent;
-    border: 2px solid var(--cor-detaques);
+    border: 2px solid var(--cor-borda-destaques);
     transition: color .2s, background-color .5s;
 }
 
 .box-btn .btn-transparente:hover {
-    color: var(--cor-fundocardsEheader);
-    background-color: var(--cor-detaques);
+    color: var(--cor-fundo-cards-e-header);
+    background-color: var(--cor-destaques);
 }
 
 
@@ -268,7 +277,7 @@ button:focus-visible, a:focus-visible {
 }
 
 .conteudo-destaques h2 {
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
     font-size: 20px;
     padding-bottom: 20px;
     text-align: center;
@@ -281,11 +290,11 @@ button:focus-visible, a:focus-visible {
 }
 
 .itens-destaques {
-    border-bottom: 4px solid var(--cor-detaques);
+    border-bottom: 4px solid var(--cor-borda-destaques);
     width: 100%;
     border-radius: 10px;
     display: flex;
-    background-color: var(--cor-fundocardsEheader);
+    background-color: var(--cor-fundo-cards-e-header);
     padding: 12px;
     gap: 10px;
 }
@@ -302,14 +311,14 @@ button:focus-visible, a:focus-visible {
 }
 
 .itens-destaques-info h3 {
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
     font-size: 18px;
     padding-bottom: 5px;
 }
 
 .itens-destaques-info p {
-    color: var(--cor-textoparagrafos);
-    font-size: 15px;
+    color: var(--cor-paragrafos);
+    font-size: 16px;
 }
 
 @media (min-width: 820px) {
@@ -336,12 +345,12 @@ button:focus-visible, a:focus-visible {
 
 /* Cardápio */
 .conteudo-cardapio {
-    background-color: var(--cor-fundocardsEheader);
+    background-color: var(--cor-fundo-cards-e-header);
     padding: 25px 20px 15px;
 }
 
 .conteudo-cardapio h2 {
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
     font-size: 20px;
     text-align: center;
 }
@@ -354,9 +363,9 @@ button:focus-visible, a:focus-visible {
 }
 
 .btn-itens button {
-    border: 2px solid var(--cor-bordassuaves);
+    border: 2px solid var(--cor-bordas-suaves);
     background-color: transparent;
-    color: var(--cor-textoparagrafos);
+    color: var(--cor-paragrafos);
     border-radius: 20px;
     padding: 5px 20px;
     cursor: pointer;
@@ -369,8 +378,8 @@ button:focus-visible, a:focus-visible {
 }
 
 .categoria.selecionado {
-    background-color: var(--cor-textoprincipalErodape);
-    color: var(--cor-fundopagina);
+    background-color: var(--cor-fundo-cardapio-selecionado);
+    color: var(--cor-fundo-cards-e-header);
     border: 2px solid transparent;
 }
 
@@ -393,12 +402,12 @@ button:focus-visible, a:focus-visible {
 .itens-info h3 {
     font-size: 18px;
     padding-bottom: 5px;
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
 }
 
 .itens-info p {
     font-size: 16px;
-    color: var(--cor-textoparagrafos);
+    color: var(--cor-paragrafos);
 }
 
 @media (min-width: 820px) {
@@ -428,13 +437,13 @@ button:focus-visible, a:focus-visible {
 }
 
 .sobrenos-info h2 {
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
     font-size: 22px;
     padding: 10px 0 5px;
 }
 
 .sobrenos-info p{
-    color: var(--cor-textoparagrafos);
+    color: var(--cor-paragrafos);
     font-size: 18px;
 }
 
@@ -443,20 +452,20 @@ button:focus-visible, a:focus-visible {
     gap: 10px;
     flex-direction: column;
     padding: 30px 0;
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
     text-align: center;
     background-color: var(--cor-ilustracoes);
     width: 100%;
 }
 
 .sobrenos-contato-info p {
-     color: var(--cor-textoparagrafos);
+     color: var(--cor-paragrafos);
      font-size: 18px;
 }
 
 .contato-info h3 {
     font-size: 20px;
-    color: var(--cor-textosecundario);
+    color: var(--cor-texto-secundario);
     margin-bottom: 5px;
 }
 
@@ -488,14 +497,13 @@ button:focus-visible, a:focus-visible {
     .contato-info {
         flex: 1;
     }
-
 }    
 
 /* Rodapé */
 footer {
     text-align: center;
     color: var(--cor-ilustracoes);
-    background-color: var(--cor-textoprincipalErodape);
+    background-color: var(--cor-rodape);
     padding: 18px 0;
 }
 
