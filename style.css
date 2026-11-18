@@ -17,7 +17,7 @@
     --cor-destaques: #b67d44;
     --cor-destaque-hover: #955f2a;
     --cor-borda-destaques: var(--cor-destaques);
-    --cor-fundo-cardapio-selecionado: var(--cor-texto-principal) ;
+    --cor-fundo-cardapio-selecionado: var(--cor-texto-principal);
     --cor-etiqueta: #586B4a;
     --cor-ilustracoes: #F0E2D0;
     --cor-bordas-suaves: #D9C6AE;
@@ -26,12 +26,21 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor-fundo-pagina);
+    
 }
 
 .body-travado {
     overflow: hidden;
+}
+
+section {
+    scroll-margin-top: var(--altura-header);
 }
 
 /* Cabeçalho / Nav */
@@ -92,6 +101,7 @@ header {
     transition: opacity .3s, visibility .3s, transform .3s;
     bottom: 0;
     left: 0;
+    overflow-y: auto;
 }
 
 .menu-aberto {
@@ -160,12 +170,6 @@ button:focus-visible, a:focus-visible {
     }
 }
 
-@media (max-height: 380px) {
-    .box-menu {
-        padding-top:  20px;
-        overflow: auto;
-    }
-}
 
 /* Conteúdo Principal */
 
@@ -228,7 +232,7 @@ button:focus-visible, a:focus-visible {
     border: 2px solid transparent;
     border-radius: 10px;
     font-size: 18px;
-    transition: all .4s;
+    transition: background-color .3s;
 } 
 
 .box-btn .btn-cor:hover {
@@ -239,7 +243,7 @@ button:focus-visible, a:focus-visible {
     color: var(--cor-destaques);
     background-color: transparent;
     border: 2px solid var(--cor-borda-destaques);
-    transition: color .2s, background-color .5s;
+    transition: color .2s, background-color .6s;
 }
 
 .box-btn .btn-transparente:hover {

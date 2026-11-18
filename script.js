@@ -1,55 +1,64 @@
 // Barra de Navegação
-let botaoMenu = document.getElementById("btn-menu");
-let ImgMenu = document.getElementById("img-menu");
-let Menu = document.getElementById("menu");
-let body = document.body;
-let ItensMenu = document.querySelectorAll(".item-menu");
+const botaoMenu = document.getElementById("btn-menu");
+const imgMenu = document.getElementById("img-menu");
+const menu = document.getElementById("menu");
+const body = document.body;
+const itensMenu = document.querySelectorAll(".item-menu");
 
 botaoMenu.addEventListener("click", () => {
-  Menu.classList.toggle("menu-aberto");
-  if (Menu.classList.contains("menu-aberto")) {
-    ImgMenu.src = "img/fechar.svg";
+  menu.classList.toggle("menu-aberto");
+  if (menu.classList.contains("menu-aberto")) {
+    imgMenu.src = "img/fechar.svg";
     botaoMenu.setAttribute("aria-expanded", "true");
+    botaoMenu.setAttribute("aria-label", "Fechar Menu");
     body.classList.add("body-travado");
   } else {
-    ImgMenu.src = "img/menu.svg";
+    imgMenu.src = "img/menu.svg";
     botaoMenu.setAttribute("aria-expanded", "false");
+    botaoMenu.setAttribute("aria-label", "Abrir Menu");
     body.classList.remove("body-travado");
   }
 });
 
-ItensMenu.forEach((itens) => {
-  itens.addEventListener("click", sessoesmenu);
+itensMenu.forEach((itens) => {
+  itens.addEventListener("click", fecharMenu);
 });
 
-function sessoesmenu() {
-  Menu.classList.remove("menu-aberto");
-  body.classList.remove("body-travado");
-  ImgMenu.src = "img/menu.svg";
-  botaoMenu.setAttribute("aria-expanded", "false");
-};
+const mediaDesktop = window.matchMedia("(min-width: 820px)");
+mediaDesktop.addEventListener("change", (evento) => {
+  if (evento.matches) {
+    fecharMenu();
+  }
+});
 
+function fecharMenu() {
+  menu.classList.remove("menu-aberto");
+  body.classList.remove("body-travado");
+  imgMenu.src = "img/menu.svg";
+  botaoMenu.setAttribute("aria-label", "Abrir Menu");
+  botaoMenu.setAttribute("aria-expanded", "false");
+}
 
 // Cardápio
-let categorias = document.querySelectorAll(".categoria");
-let ItensInfo = document.querySelectorAll(".cardapio-info");
+const categorias = document.querySelectorAll(".categoria");
+const itensInfo = document.querySelectorAll(".cardapio-info");
 
 categorias.forEach((categoria) => {
-
   categoria.addEventListener("click", () => {
-    
     categorias.forEach((item) => {
       item.classList.remove("selecionado");
+      item.setAttribute("aria-pressed", "false");
     });
 
     categoria.classList.add("selecionado");
+    categoria.setAttribute("aria-pressed", "true");
 
-    ItensInfo.forEach((item) => {
+    itensInfo.forEach((item) => {
       item.classList.add("desativado");
     });
 
-    let CardapioSelecionado = document.getElementById(categoria.dataset.menu);
+    const cardapioSelecionado = document.getElementById(categoria.dataset.menu);
 
-    CardapioSelecionado.classList.remove("desativado");
+    cardapioSelecionado.classList.remove("desativado");
   });
 });
