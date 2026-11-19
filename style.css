@@ -30,9 +30,19 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    button, a, .box-menu{
+        transition: none;
+    }
+}
+
+
 body {
     background-color: var(--cor-fundo-pagina);
-    
 }
 
 .body-travado {
@@ -78,12 +88,15 @@ header {
     padding: 4px;
 }
 
+
  nav button:hover {
     background-color: var(--cor-destaques);
 }
 
  nav button img {       
-    width: 22px;
+    max-width: 22px;
+    width: 100%;
+    height: auto;
 }
 
 .box-menu {
@@ -93,7 +106,7 @@ header {
     flex-direction: column;
     position: fixed;
     background-color: var(--cor-fundo-navegacao);
-    height: calc(100dvh -  var(--altura-header));
+    height: calc(100dvh - var(--altura-header));
     width: 100%;
     text-align: center;
     padding-top: 100px;
@@ -136,12 +149,18 @@ header {
     transform: scale(1.2);
 }
 
+
 button:focus-visible, a:focus-visible {
     outline: 4px solid var(--cor-etiqueta);
     outline-offset: 4px;
 }
 
 @media (min-width: 820px) {
+
+    header {
+        padding: 2px 30px;
+    } 
+
     nav button {
         display: none;
     }
@@ -183,7 +202,9 @@ button:focus-visible, a:focus-visible {
 }
 
 .conteudo-inicio img {
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
 }
 
 .info-inicio {
@@ -260,7 +281,7 @@ button:focus-visible, a:focus-visible {
     }
 
     .conteudo-inicio img {
-        width: 300px;
+       max-width: 300px;
     }
 
     .info-inicio {
@@ -305,6 +326,8 @@ button:focus-visible, a:focus-visible {
 
 .itens-destaques img {
     max-width: 80px;
+    width: 100%;
+    height: auto;
 }
 
 .itens-destaques-info {
@@ -333,7 +356,7 @@ button:focus-visible, a:focus-visible {
 
     .itens-destaques img {
         max-width: 90px;
-    }
+    }   
 
     .box-destaques {
         flex-direction: row;
@@ -363,6 +386,7 @@ button:focus-visible, a:focus-visible {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
     padding: 15px 0;
 }
 
@@ -378,7 +402,7 @@ button:focus-visible, a:focus-visible {
 }
 
 .btn-itens button:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .categoria.selecionado {
@@ -437,6 +461,7 @@ button:focus-visible, a:focus-visible {
 
 .box-sobrenos img {
     max-width: 100%;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -452,6 +477,7 @@ button:focus-visible, a:focus-visible {
 }
 
 .sobrenos-contato-info {
+    scroll-margin-top: var(--altura-header);
     display: flex;
     gap: 10px;
     flex-direction: column;
