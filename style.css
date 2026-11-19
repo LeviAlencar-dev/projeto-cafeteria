@@ -38,6 +38,11 @@ html {
     button, a, .box-menu{
         transition: none;
     }
+
+    button:hover,
+    a:hover {
+        transform: none;
+    }
 }
 
 
@@ -460,7 +465,8 @@ button:focus-visible, a:focus-visible {
 }
 
 .box-sobrenos img {
-    max-width: 100%;
+    max-width: 450px;
+    width: 100%;
     height: auto;
     border-radius: 20px;
 }
@@ -510,7 +516,7 @@ button:focus-visible, a:focus-visible {
         gap: 40px;
         padding: 40px 30px;
     }
-
+    
     .sobrenos-info {
         display: flex;
         text-align: left;
