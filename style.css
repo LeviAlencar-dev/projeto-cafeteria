@@ -38,11 +38,6 @@ html {
     button, a, .box-menu{
         transition: none;
     }
-
-    button:hover,
-    a:hover {
-        transform: none;
-    }
 }
 
 
@@ -60,15 +55,15 @@ section {
 
 /* Cabeçalho / Nav */
 header {
+    min-height: var(--altura-header);
     background-color: var(--cor-fundo-cards-e-header);
     border-bottom: 1px solid var(--cor-bordas-suaves);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 2px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
-    min-height: var(--altura-header);
     z-index: 10;
 }
 
@@ -83,14 +78,14 @@ header {
 }
 
  nav button {
+    background-color: transparent;
     border: none;
+    border-radius: 50%;
+    padding: 4px;
     display: flex;
     justify-content: center;
-    background-color: transparent;
-    border-radius: 50%;
-    cursor: pointer;
     transition: background-color .3s;
-    padding: 4px;
+    cursor: pointer;
 }
 
 
@@ -99,32 +94,32 @@ header {
 }
 
  nav button img {       
-    max-width: 22px;
     width: 100%;
+    max-width: 22px;
     height: auto;
 }
 
 .box-menu {
-    opacity: 0;
-    visibility: hidden;
+    width: 100%;
+    height: calc(100dvh - var(--altura-header));
+    background-color: var(--cor-fundo-navegacao);
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     position: fixed;
-    background-color: var(--cor-fundo-navegacao);
-    height: calc(100dvh - var(--altura-header));
-    width: 100%;
-    text-align: center;
-    padding-top: 100px;
-    transform: translateY(100%);
-    transition: opacity .3s, visibility .3s, transform .3s;
     bottom: 0;
     left: 0;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
     overflow-y: auto;
+    transform: translateY(100%);
+    transition: opacity .3s, visibility .3s, transform .3s;
 }
 
 .menu-aberto {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -135,18 +130,18 @@ header {
 }
 
 .box-menu ul {
-    list-style: none;
+    padding: 30px 80px 80px;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 30px 80px 80px;
+    list-style: none;
 }
 
 .box-menu ul li a{
-    text-decoration: none;
-    font-size: 20px;
-    color: var(--cor-texto-secundario);
     display: block;
+    color: var(--cor-texto-secundario);
+    font-size: 20px;
+    text-decoration: none;
     transition: transform .3s;
 }
 
@@ -171,16 +166,16 @@ button:focus-visible, a:focus-visible {
     }
 
     .box-menu {
-        opacity: 1;
-        visibility: visible;
-        position: static;
-        background-color: transparent;
-        height: auto;
         width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        position: static;
         bottom: auto;
         left: auto;
+        visibility: visible;
+        opacity: 1;
         transform: translateY(0);
-        padding: 0;
   }
 
      .box-menu h2 {
@@ -188,9 +183,9 @@ button:focus-visible, a:focus-visible {
   }
 
   .box-menu ul {
+        padding: 10px;
         flex-direction: row;
         gap: 50px;
-        padding: 10px;
     }
 }
 
@@ -199,16 +194,16 @@ button:focus-visible, a:focus-visible {
 
 /* Início */
 .conteudo-inicio {
+    padding: 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 20px;
 }
 
 .conteudo-inicio img {
-    max-width: 200px;
     width: 100%;
+    max-width: 200px;
     height: auto;
 }
 
@@ -219,45 +214,45 @@ button:focus-visible, a:focus-visible {
 }
 
 .info-inicio h2 {
-    font-size: 30px;
-    color: var(--cor-texto-secundario);
     padding-bottom: 15px;
+    color: var(--cor-texto-secundario);
+    font-size: 30px;
 }
 
 .info-inicio .etiqueta {
+    padding: 15px 0 10px;
     color: var(--cor-etiqueta);
-    text-transform: uppercase;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 3px;
-    padding: 15px 0 10px;
+    text-transform: uppercase;
 }
 
 .info-inicio p {
+    padding-bottom: 15px;
     color: var(--cor-paragrafos);
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 25px;
-    padding-bottom: 15px;
 }
 
 .box-btn {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 10px;
     text-align: center;
 }
 
  .box-btn .btn-cor {
-    text-decoration: none;
-    color: var(--cor-fundo-cards-e-header);
-    background-color: var(--cor-destaques);
     width: 100%;
-    padding: 10px 0;
+    background-color: var(--cor-destaques);
     border: 2px solid transparent;
     border-radius: 10px;
+    padding: 10px 0;
+    color: var(--cor-fundo-cards-e-header);
     font-size: 18px;
+    text-decoration: none;
     transition: background-color .3s;
 } 
 
@@ -266,23 +261,23 @@ button:focus-visible, a:focus-visible {
 }
 
 .box-btn .btn-transparente {
-    color: var(--cor-destaques);
     background-color: transparent;
     border: 2px solid var(--cor-borda-destaques);
+    color: var(--cor-destaques);
     transition: color .2s, background-color .6s;
 }
 
 .box-btn .btn-transparente:hover {
-    color: var(--cor-fundo-cards-e-header);
     background-color: var(--cor-destaques);
+    color: var(--cor-fundo-cards-e-header);
 }
 
 
 @media (min-width: 820px) {
     .conteudo-inicio {
+        padding: 25px 30px;
         flex-direction: row-reverse;
         justify-content: space-between;
-        padding: 25px 30px;
     }
 
     .conteudo-inicio img {
@@ -307,9 +302,9 @@ button:focus-visible, a:focus-visible {
 }
 
 .conteudo-destaques h2 {
+    padding-bottom: 20px;
     color: var(--cor-texto-secundario);
     font-size: 20px;
-    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -320,18 +315,18 @@ button:focus-visible, a:focus-visible {
 }
 
 .itens-destaques {
-    border-bottom: 4px solid var(--cor-borda-destaques);
     width: 100%;
-    border-radius: 10px;
-    display: flex;
     background-color: var(--cor-fundo-cards-e-header);
+    border-bottom: 4px solid var(--cor-borda-destaques);
+    border-radius: 10px;
     padding: 12px;
+    display: flex;
     gap: 10px;
 }
 
 .itens-destaques img {
-    max-width: 80px;
     width: 100%;
+    max-width: 80px;
     height: auto;
 }
 
@@ -343,9 +338,9 @@ button:focus-visible, a:focus-visible {
 }
 
 .itens-destaques-info h3 {
+    padding-bottom: 5px;
     color: var(--cor-texto-secundario);
     font-size: 18px;
-    padding-bottom: 5px;
 }
 
 .itens-destaques-info p {
@@ -388,22 +383,22 @@ button:focus-visible, a:focus-visible {
 }
 
 .btn-itens {
+    padding: 15px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
-    padding: 15px 0;
 }
 
 .btn-itens button {
-    border: 2px solid var(--cor-bordas-suaves);
     background-color: transparent;
-    color: var(--cor-paragrafos);
+    border: 2px solid var(--cor-bordas-suaves);
     border-radius: 20px;
     padding: 5px 20px;
-    cursor: pointer;
-    transition: transform .3s;
+    color: var(--cor-paragrafos);
     font-size: 18px;
+    transition: transform .3s;
+    cursor: pointer;
 }
 
 .btn-itens button:hover {
@@ -412,13 +407,13 @@ button:focus-visible, a:focus-visible {
 
 .categoria.selecionado {
     background-color: var(--cor-fundo-cardapio-selecionado);
-    color: var(--cor-fundo-cards-e-header);
     border: 2px solid transparent;
+    color: var(--cor-fundo-cards-e-header);
 }
 
 .cardapio-info {
-    display: block;
     padding: 10px 0 0;
+    display: block;
 }
 
 .cardapio-info.desativado {
@@ -426,21 +421,21 @@ button:focus-visible, a:focus-visible {
 }
 
 .itens-info {
-    display: flex;
-    justify-content: space-between;
     border-bottom: 2px dashed var(--cor-ilustracoes);
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .itens-info h3 {
-    font-size: 18px;
     padding-bottom: 5px;
     color: var(--cor-texto-secundario);
+    font-size: 18px;
 }
 
 .itens-info p {
-    font-size: 16px;
     color: var(--cor-paragrafos);
+    font-size: 16px;
 }
 
 @media (min-width: 820px) {
@@ -460,21 +455,20 @@ button:focus-visible, a:focus-visible {
 
 /* Sobre nós */
 .box-sobrenos {
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 .box-sobrenos img {
-    max-width: 450px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
 }
 
 .sobrenos-info h2 {
+    padding: 10px 0 5px;
     color: var(--cor-texto-secundario);
     font-size: 22px;
-    padding: 10px 0 5px;
 }
 
 .sobrenos-info p{
@@ -483,15 +477,15 @@ button:focus-visible, a:focus-visible {
 }
 
 .sobrenos-contato-info {
-    scroll-margin-top: var(--altura-header);
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
+    width: 100%;
+    background-color: var(--cor-ilustracoes);
     padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     color: var(--cor-texto-secundario);
     text-align: center;
-    background-color: var(--cor-ilustracoes);
-    width: 100%;
+    scroll-margin-top: var(--altura-header);
 }
 
 .sobrenos-contato-info p {
@@ -500,28 +494,28 @@ button:focus-visible, a:focus-visible {
 }
 
 .contato-info h3 {
-    font-size: 20px;
-    color: var(--cor-texto-secundario);
     margin-bottom: 5px;
+    color: var(--cor-texto-secundario);
+    font-size: 20px;
 }
 
 
 @media (min-width: 820px){
 
     .box-sobrenos {
+        padding: 40px 30px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 40px;
-        padding: 40px 30px;
     }
-    
+
     .sobrenos-info {
         display: flex;
-        text-align: left;
         flex-direction: column;
         justify-content: center;
+        text-align: left;
         
     }
 
@@ -537,10 +531,10 @@ button:focus-visible, a:focus-visible {
 
 /* Rodapé */
 footer {
-    text-align: center;
-    color: var(--cor-ilustracoes);
     background-color: var(--cor-rodape);
     padding: 18px 0;
+    color: var(--cor-ilustracoes);
+    text-align: center;
 }
 
 
