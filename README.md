@@ -4,7 +4,7 @@ Landing page responsiva de uma cafeteria fictícia, feita com **HTML, CSS e Java
 
 ## Demonstração
 
-- **Página publicada:** [COLE AQUI O LINK DO GITHUB PAGES]
+- **Página publicada:** https://levialencar-dev.github.io/projeto-cafeteria/
 - **Capturas de tela:**
 
 | Celular | Computador |
